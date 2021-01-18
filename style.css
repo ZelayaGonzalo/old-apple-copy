@@ -1,117 +1,244 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-ul,ol{
-    list-style: none;
+ul,
+ol {
+  list-style: none;
+}
+a{
+    color: #08c;
 }
 body {
-    font: 12px/18px Helvetica, Arial, Verdana, sans-serif;
-    color: #333;
-    min-height: 830px;
-    height: 830px;
-    max-height: 1472px;
-    position: relative;
-    z-index: 1;
-    min-width: 1024px;
-    height: 100%;
-    background: #fff;
+  font: 12px/18px Helvetica, Arial, Verdana, sans-serif;
+  color: #333;
+  min-height: 830px;
+  height: 830px;
+  max-height: 1472px;
+  position: relative;
+  z-index: 1;
+  min-width: 1024px;
+  height: 100%;
+  background: #fff;
 }
-input{
-    width: 80px;
-    font-size: 8px;
-    border-radius: 20px;
-    padding: 2px 5px 2px 20px;
-    background:transparent;
+input {
+  width: 80px;
+  font-size: 8px;
+  border-radius: 20px;
+  padding: 2px 5px 2px 20px;
+  background: transparent;
 }
-input:focus{
-    background-color: white;
+input:focus {
+  background-color: white;
 }
-.billboard{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 292px;
-    left: 0;
-    overflow: hidden;
-}
-
-.your-verse{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: auto;
-    left: 50%;
-    margin-left: -720px;
-    width: 1440px;
-    background: url("./images/your_verse_hero.jpeg") 50% 100% no-repeat;
-    background-size: auto;
-    background-size: 1440px 1315px;
+.billboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 292px;
+  left: 0;
+  overflow: hidden;
 }
 
-.globalheader{
-    top:18px;
-    background-color: #333;
-    display: block;
-    position: relative;
-    height: 36px;
-    width: 980px;
-    margin: 0 auto;
-    z-index: 10;
-    border-radius: 4px;
-    background: rgb(143,143,143);
-background: linear-gradient(0deg, rgba(143,143,143,1) 28%, rgba(112,112,112,1) 50%, rgba(94,94,94,1) 50%, rgba(143,143,143,1) 89%);
+.your-verse {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  margin-left: -720px;
+  width: 1440px;
+  background: url('./images/your_verse_hero.jpeg') 50% 100% no-repeat;
+  background-size: auto;
+  background-size: 1440px 1315px;
+}
+
+.globalheader {
+  top: 18px;
+  background-color: #333;
+  display: block;
+  position: relative;
+  height: 36px;
+  width: 980px;
+  margin: 0 auto;
+  z-index: 10;
+  border-radius: 4px;
+  background: rgb(143, 143, 143);
+  background: linear-gradient(
+    0deg,
+    rgba(143, 143, 143, 1) 28%,
+    rgba(112, 112, 112, 1) 50%,
+    rgba(94, 94, 94, 1) 50%,
+    rgba(143, 143, 143, 1) 89%
+  );
 }
 
 /*Navbar*/
 
-.globalnav{
-    height: 36px;
-    display: flex;
-    align-items: center;
+.globalnav {
+  height: 36px;
+  display: flex;
+  align-items: center;
 }
-.globalnav .first{
-    border-radius: 4px 0 0 4px;
-    font-size: 21px;
+.globalnav .first {
+  border-radius: 4px 0 0 4px;
+  font-size: 21px;
 }
-.globalnav li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 105px;
-    height: 36px;
-    border: 0.1px solid #575757;
-    border-width: 0.1px;
-    color:white;
-    font-size: 12px;
-    font-weight: 700;
+.globalnav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 36px;
+  border: 0.1px solid #575757;
+  border-width: 0.1px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+}
+.globalnav li:hover{
+    cursor: pointer;
+    background-color: rgba(51, 51, 51, 0.473);
 }
 
-.globalnav .last{
-    width: 140px;
-    border-radius: 0 4px 4px 0;
+.globalnav .last {
+  width: 140px;
+  border-radius: 0 4px 4px 0;
 }
-.last div{
-    position: relative;
+.last div {
+  position: relative;
 }
-.last .fa-search{
-    position: absolute;
-    left: 6px;
-    top: 4px;
-    color: #d1d1d1;
+.last .fa-search {
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  color: #d1d1d1;
 }
 
 /*Header*/
 
-.header{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    margin-top: -170px;
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -170px;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/*Promos*/
+.promos {
+  position: absolute;
+  z-index: 1;
+  bottom: 90px;
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100%;
+  min-width: 100%;
+  height: 200px;
+}
+.promos ul {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-evenly;
+}
+.promo-frame1 {
+  max-width: 360px;
+  width: 364px;
+  height: 200px;
+  min-width: 260px;
+  margin-right: 2px;
+  background: url('./images/promo1.jpeg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+.promo-frame2 {
+  max-width: 360px;
+  width: 364px;
+  height: 200px;
+  min-width: 260px;
+  margin-right: 2px;
+  background: url('./images/promo2.jpeg');
+  background-size: cover;
+  cursor: pointer;
+}
+.promo-frame3 {
+  max-width: 360px;
+  width: 364px;
+  height: 200px;
+  min-width: 260px;
+  margin-right: 2px;
+  background: url('./images/promo3.jpeg');
+  background-size: cover;
+  cursor: pointer;
+}
+.promo-frame4 {
+  max-width: 360px;
+  width: 364px;
+  height: 200px;
+  min-width: 260px;
+  margin-right: 2px;
+  background: url('./images/promo4.jpeg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+/*Footer*/
+
+.footer {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  min-width: 980px;
+  width: 100%;
+  height: 90px;
+  padding: 0;
+  color: #6e6e6e;
+  font-size: 0.8334em;
+  line-height: 1.2;
+  text-align: center;
+}
+.wrapper{
+    margin: 0 auto;
+    width: 980px;
+    padding: 1em 0 2.6em;
+    color: #6e6e6e;
+    font-size: 1em;
+    line-height: 1.2;
+    text-align: center;
+}
+.left{
+    float: left;
+    clear: both;
+    width: 49%;
+    padding-top: 1.5em;
+    text-align: left;
+}
+
+.right{
+    float: right;
+    width: 51%;
+    padding-top: 1.5em;
+    text-align: right;
+   
+}
+.piped{
+    display: inline-flex;
+}
+.piped li{
+    border-right: 1px solid #ccc;;
+    margin-left: .4em;
+    padding-right: .4em;
+}
+
+.copyright{
+    display: inline;
+    margin: 0;
 }
